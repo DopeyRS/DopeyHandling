@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CHandlingDataMgr>
+  <HandlingData>
+	<Item type="CHandlingData">
+      <handlingName>hard25durangob</handlingName>
+      
+      <!-- Vehicle Mass & Drag -->
+      <fMass value="2100.000000" /> <!-- Weight of the vehicle in kg. Affects handling and collision physics. -->
+      <fInitialDragCoeff value="8.000000" /> <!-- Air resistance; higher values slow the vehicle down faster. -->
+      <fPercentSubmerged value="85.000000" /> <!-- Determines at what depth the car will float or sink in water. -->
+      
+      <!-- Center of Mass & Inertia -->
+      <vecCentreOfMassOffset x="0.000000" y="0.050000" z="-0.150000" /> <!-- Affects weight distribution and balance. Higher Z values make the car more prone to rolling. -->
+      <vecInertiaMultiplier x="1.000000" y="1.200000" z="1.200000" /> <!-- Affects rotational inertia; higher values make the car less responsive to turns. -->
+      
+      <!-- Powertrain & Drivetrain -->
+      <fDriveBiasFront value="0.450000" /> <!-- 0.0 = RWD, 1.0 = FWD. AWD values between 0.4 and 0.6 distribute power. -->
+      <nInitialDriveGears value="8" /> <!-- Number of forward gears in the transmission. -->
+      <fInitialDriveForce value="0.330000" /> <!-- Torque applied to wheels; higher values mean faster acceleration. -->
+      <fDriveInertia value="1.000000" /> <!-- How fast the engine revs; higher values make power delivery smoother but slower. -->
+      <fClutchChangeRateScaleUpShift value="3.000000" /> <!-- How quickly the car shifts up gears. Higher values = faster shifts. -->
+      <fClutchChangeRateScaleDownShift value="2.500000" /> <!-- How quickly the car shifts down gears. -->
+      <fInitialDriveMaxFlatVel value="140.000000" /> <!-- Maximum vehicle speed in a flat road scenario. -->
+      
+      <!-- Braking -->
+      <fBrakeForce value="0.600000" /> <!-- Overall braking strength; too high can cause lockups. -->
+      <fBrakeBiasFront value="0.600000" /> <!-- Distribution of braking force. Higher values favor front wheels. -->
+      <fHandBrakeForce value="0.350000" /> <!-- Strength of the handbrake; higher values lock the rear wheels more forcefully. -->
+      
+      <!-- Steering & Handling -->
+      <fSteeringLock value="38.000000" /> <!-- Maximum steering angle; affects turn-in response. -->
+      <fTractionCurveMax value="2.230000" /> <!-- Peak grip level of the tires. Higher values mean more grip. -->
+      <fTractionCurveMin value="1.750000" /> <!-- Minimum grip level; affects loss of traction in extreme maneuvers. -->
+      <fTractionCurveLateral value="19.000000" /> <!-- Lateral grip curve; influences cornering stability. -->
+      <fTractionSpringDeltaMax value="0.130000" /> <!-- How much traction is lost over bumps. -->
+      <fLowSpeedTractionLossMult value="0.900000" /> <!-- How much grip is lost at low speeds; lower values reduce sliding. -->
+      <fCamberStiffnesss value="0.000000" /> <!-- Effect of camber on grip; generally left at zero. -->
+      <fTractionBiasFront value="0.510000" /> <!-- Distribution of grip between front and rear. Higher values favor front. -->
+      <fTractionLossMult value="0.600000" /> <!-- Multiplier for overall traction loss; lower values prevent sliding. -->
+      
+      <!-- Suspension -->
+      <fSuspensionForce value="1.650000" /> <!-- Stiffness of the suspension; higher values reduce body roll. -->
+      <fSuspensionCompDamp value="1.000000" /> <!-- Damping when suspension compresses; higher values make it firmer. -->
+      <fSuspensionReboundDamp value="1.800000" /> <!-- Damping when suspension rebounds; affects ride smoothness. -->
+      <fSuspensionUpperLimit value="0.120000" /> <!-- Max extension of the suspension; too high makes the car bounce. -->
+      <fSuspensionLowerLimit value="-0.180000" /> <!-- Max compression of suspension; too low can cause bottoming out. -->
+      <fSuspensionRaise value="0.000000" /> <!-- Adjusts ride height; positive raises the car, negative lowers it. -->
+      <fSuspensionBiasFront value="0.510000" /> <!-- Distributes suspension stiffness; higher values stiffen the front. -->
+      
+      <!-- Anti-Roll Bars -->
+      <fAntiRollBarForce value="1.400000" /> <!-- How much the car resists rolling in turns. Higher values = less roll. -->
+      <fAntiRollBarBiasFront value="0.600000" /> <!-- Distribution of roll stiffness between front and rear. -->
+      
+      <!-- Roll Centers -->
+      <fRollCentreHeightFront value="0.450000" /> <!-- Height of front roll center; lower values improve stability. -->
+      <fRollCentreHeightRear value="0.420000" /> <!-- Height of rear roll center; affects rear-end grip. -->
+      
+      <!-- Damage Multipliers -->
+      <fCollisionDamageMult value="1.000000" /> <!-- Multiplier for collision damage. -->
+      <fWeaponDamageMult value="1.000000" /> <!-- Multiplier for damage taken from weapons. -->
+      <fDeformationDamageMult value="0.800000" /> <!-- Multiplier for body deformation from damage. -->
+      <fEngineDamageMult value="1.000000" /> <!-- Multiplier for engine damage. -->
+      
+      <!-- Fuel & Fluids -->
+      <fPetrolTankVolume value="80.000000" /> <!-- Fuel tank size in liters. -->
+      <fOilVolume value="5.500000" /> <!-- Engine oil capacity. -->
+      
+      <!-- Seating -->
+      <fSeatOffsetDistX value="0.000000" /> <!-- Lateral seat position offset. -->
+      <fSeatOffsetDistY value="0.000000" /> <!-- Forward/backward seat position offset. -->
+      <fSeatOffsetDistZ value="0.000000" /> <!-- Vertical seat position offset. -->
+      
+      <!-- Misc -->
+      <nMonetaryValue value="50000" /> <!-- In-game value of the vehicle. -->
+      <strModelFlags>440010</strModelFlags>
+      <strHandlingFlags>0</strHandlingFlags>
+      <strDamageFlags>0</strDamageFlags>
+      <AIHandling>AVERAGE</AIHandling>
+      
+      <!-- Sub Handling -->
+      <SubHandlingData>
+        <Item type="CCarHandlingData">
+          <fBackEndPopUpCarImpulseMult value="0.100000" /> <!-- How much the rear lifts under impact. -->
+          <fBackEndPopUpBuildingImpulseMult value="0.030000" /> <!-- Affects rear-end lift from buildings. -->
+          <fBackEndPopUpMaxDeltaSpeed value="0.600000" /> <!-- Maximum speed change affecting rear-end lift. -->
+        </Item>
+        <Item type="NULL" />
+        <Item type="NULL" />
+      </SubHandlingData>
+    </Item>
+  </HandlingData>
+</CHandlingDataMgr>
